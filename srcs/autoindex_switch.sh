@@ -1,0 +1,1 @@
+grep -q 'autoindex on;' /etc/nginx/sites-available/default  && (sed -i 's/autoindex on;/autoindex off;/g' /etc/nginx/sites-available/default ; nginx -s reload;) || (sed -i 's/autoindex off;/autoindex on;/g' /etc/nginx/sites-available/default ; nginx -s reload;)
